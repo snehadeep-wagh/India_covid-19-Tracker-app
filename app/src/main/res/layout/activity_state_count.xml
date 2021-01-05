@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".StateCount">
+
+        <TextView
+            android:id="@+id/stateViewTextId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="12dp"
+            android:fontFamily="@font/anton"
+            android:letterSpacing="0.12"
+            android:paddingBottom="16dp"
+            android:text="@string/state_wise_statistics"
+            android:textColor="#302B2B"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/stateViewTextId"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayoutId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/StateRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stateViewTextId"
+                tools:listitem="@layout/list_preview" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="66dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/lastUPdateId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toStartOf="@id/dateText"
+                    android:gravity="right"
+                    android:text="@string/last_updated_on"
+                    android:textColor="#4CAF50"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/ActualDate"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/dd_mm_yyyy"
+                    android:gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#00BCD4" />
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ActualDate"
+                    android:text="@string/date"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#3F51B5" />
+
+                <TextView
+                    android:id="@+id/ActualTime"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dd_mm_yyyy_time"
+                    android:layout_marginStart="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/ActualDate"
+                    android:gravity="left"
+                    android:textColor="#00BCD4"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/TimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateText"
+                    android:layout_toStartOf="@id/ActualTime"
+                    android:text="@string/time"
+                    android:textColor="#3F51B5" />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

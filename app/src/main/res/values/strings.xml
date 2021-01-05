@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CovidTracker</string>
+    <string name="covid_19_tracker">India Covid-19 Tracker</string>
+    <string name="total_statistics">Total statistics</string>
+    <string name="_0000">-</string>
+    <string name="total_recovered">Total Recovered</string>
+    <string name="total_confirmed">Total Confirmed</string>
+    <string name="total_deceased">Total Deceased</string>
+    <string name="yesterday_s_statistics">Yesterday\'s statistics</string>
+    <string name="connection_interrupted">Connection interrupted</string>
+    <string name="last_updated_on">Last updated on</string>
+    <string name="state_wise_statistics">State wise statistics</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="date">Date:</string>
+    <string name="dd_mm_yyyy_time">dd:mm:yyyy</string>
+    <string name="time">Time:</string>
+</resources>
