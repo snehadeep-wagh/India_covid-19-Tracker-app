@@ -14,4 +14,9 @@
     <string name="date">Date:</string>
     <string name="dd_mm_yyyy_time">dd:mm:yyyy</string>
     <string name="time">Time:</string>
+    <string name="active_cases">Active cases</string>
+    <string name="recovered_patients">Recovered patients</string>
+    <string name="deceased_patients">Deceased patients</string>
+    <string name="move_to_next_activity">Move to next activity</string>
+    <string name="check_my_count">Check my count!</string>
 </resources>
