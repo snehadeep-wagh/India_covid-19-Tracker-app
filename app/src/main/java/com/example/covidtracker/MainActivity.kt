@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_CovidTracker)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

@@ -24,6 +24,7 @@ class StateCount : AppCompatActivity() {
     private lateinit var binding: ActivityStateCountBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_CovidTracker)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_state_count)
 
         //adapter object
